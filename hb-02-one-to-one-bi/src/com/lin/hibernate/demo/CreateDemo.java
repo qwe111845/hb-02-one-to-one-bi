@@ -26,14 +26,14 @@ public class CreateDemo {
 
 			Instructor tempInstructor = 
 					new Instructor(
-							"Lin",
-							"Chen",
-							"test@gmail.com");
+							"Lint",
+							"Chent",
+							"test12@gmail.com");
 			
 			InstructorDetail tempInstructorDetail = 
 					new InstructorDetail(
 							"https://www.youtube.com/watch?v=NCPH9JUFESA",
-							"coding");
+							"coding22");
 			session.beginTransaction();
 			
 			tempInstructor.setInstructorDetail(tempInstructorDetail);

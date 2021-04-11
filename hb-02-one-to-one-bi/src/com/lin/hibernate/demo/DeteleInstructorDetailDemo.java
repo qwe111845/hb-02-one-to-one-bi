@@ -26,12 +26,16 @@ public class DeteleInstructorDetailDemo {
 
 			session.beginTransaction();
 			
-			int theId = 4;
+			int theId = 5;
 			InstructorDetail tempInstructorDetail = session.get(InstructorDetail.class, theId);
 				
 			System.out.println("tempInstructorDetail: " + tempInstructorDetail);
 			System.out.println("tempInstructor: " + tempInstructorDetail.getInstructor());
 			
+			
+			// remove the associated object reference
+			// break bi-directional link
+			tempInstructorDetail.getInstructor().setInstructorDetail(null);
 			session.delete(tempInstructorDetail);
 			
 			session.getTransaction().commit();
